@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+   <meta charset="UTF-8"/>
+   <link rel = "stylesheet" href = "_css/estilo.css">
+
+   <Title> </Title>
+
+
+
+</head>
+
+
+<body>
+<div>
+
+    <?php
+
+    	//Operadores Relacionais
+    	// Maior, >
+    	// Menor, <
+    	// Maior ou igual >= 
+    	// Menor ou igual <= 
+    	// Diferente != 
+    	// Igual ==
+    	// Identico $a === $b (Igual e do mesmo tipo)
+
+    	// Operador Unário, (expressão?verdadeiro:falso)
+ 		// Exemplo $maior = $a>$b ? $a:$b
+ 		// Se a for maior que b, maior recebe a, se não, recebe b 
+
+
+ 		// 1 - Permitir que o usuário escolha entre somar e multiplicar dos números. 
+
+    	$n1 = $_GET["a"];
+    	$n2 = $_GET["b"];
+		$tipo = $_GET["op"]; 
+		echo "Os valores passados foram $n1 e $n2 </br>";
+		$r = ($tipo =="soma")? $n1+$n2: $n1*$n2;
+
+		echo "O resultado será $r ";
+
+
+		// 2 - Verficar se dois elementos são iguais ou identicos
+
+		$a = 3; 
+		$b = "3";
+
+		$r = ($a == $b)? "Sim":"Não";
+		echo " <br> <br> As variaveis A e B são iguais? $r";
+
+		$r = ($a === $b)? "Sim":"Não";
+		echo " <br> <br> As variaveis A e B são identicas? $r";
+
+
+
+		// 3 - Mostrar a situação de um aluno, de acordo com a sua média
+
+		$nota1 = $_GET["n1"];
+		$nota2 = $_GET["n2"];
+
+		$resultado = (($nota1+$nota2)/2)>6? "Aprovado":"Reprovado";
+
+		echo  "<br> <br> O aluno foi $resultado com média " .($nota1+$nota2)/2; 
+
+
+		// Operadores Lógicos. 
+		// E, and ou &&
+		// ou, or ou ||
+		// ou exclusivo(Pode ser uma coisa ou outra, mas nunca as duas), xor
+		// Não, ! 
+
+		// 4 - Mostrar se um eleitor é obrigado a votar ou não. 
+
+		$ano = $_GET["an"];
+		$idade = 2020 - $ano; 
+		echo " <br> <br> Quem nasceu em $ano tem idade de $idade anos";
+
+		$tipo = ($idade >=18 and $idade<65)?"Obrigatorio":"Não obrigatorio";
+		echo "<br> E dessa forma seu voto é $tipo";
+
+
+    ?> 
+
+</div>
+</body>
+
+
+
+</html>
