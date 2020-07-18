@@ -20,7 +20,7 @@
 
       span.texto {
         font-size: <?php echo $tam; ?>; 
-        color: <? php eco $cor ; ?>; 
+        color: <?php echo $cor ; ?>; 
       }
 
    </style>
@@ -33,7 +33,7 @@
 <div>
 
   <?php
-    echo "<span class="texto">$txt</span>";
+    echo "<span class='texto'>$txt</span>";
   ?>
 
    	
